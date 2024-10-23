@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Archweb LoveScore Page</title>
+
+<meta name="viewport" content="width=device-width initial-scale=1"/>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html;"/>
+<meta name="Love Score Checker" content="Are you curious about the strength of your relationship? Do you want to gauge the love between you and your partner? Look no further than LoveScore, the ultimate love compatibility calculator."/>
+
+<style type="text/css">
+   * { 
+   background-color: pink;
+}
+
+ .input-container {
+    position: relative; 
+    padding-top: 10px;
+    width: 100%;
+    height: 350px; 
+    text-align: center;
+    background-color: pink;
+    margin-left: -30px;
+    padding: 10px 20px;
+   margin-top: -20px;
+}
+
+ .name-input {
+   display: inline-block;
+   width: 200px;
+   height: 30px;
+   border: 2px solid #fff;
+   text-align: center;
+   color: maroon;
+   font-size: 20px;
+   font-weight: bold;
+   font-family: Monotype Corsiva;
+   margin-top: 5px;
+} 
+  
+ #signup-btn { 
+   height: 50px;
+   width: 210px;
+   font-size: 20px; 
+   background-color: lightgreen; 
+   color: #fff; 
+   border: none;   
+   margin-top: 5px;
+   font-weight: bold; 
+   border-radius: 20px;
+   box-shadow: 2px 2px 5px #000;
+   margin-bottom: 20px;
+} 
+ 
+ .input-para { 
+   font-family: Arial; 
+   font-weight: bold;
+}
+ 
+ .para-input { 
+   background-color: red;
+   border: none;
+   border-radius: 10px;
+   font-size: 20px; 
+   padding: 15px; 
+   color: #fff;
+   font-family: Copperplate;
+   text-align: center;
+   margin-left: 20px;
+   box-shadow: 3px 3px 5px #000;
+}   
+ 
+ span {
+   background-color: red;
+   color: lightblue; 
+} 
+ 
+ .img-input { 
+   width: 100%;
+   border-radius: 15px;
+   justify-content: center;
+   box-shadow: 2px 2px 5px #000; 
+   margin-right: -20px;
+}
+  
+</style>
+</head>
+<body>
+ <div class="input-container"> 
+  <div class="input-para">
+   <p class="para-input">This Love Score checker was created by <span>Archweb Developer</span> to help soul mate check their love score.</p> 
+ <img class='img-input' src='images/Couple.JPG'>
+  <p>
+ Are you curious about the strength of your relationship? Do you want to gauge the love between you and your partner? Look no further than LoveScore, the ultimate love compatibility calculator.
+  </p> 
+   <p>
+      <h3>Instructions</h3>
+    <ul> 
+  <li>To check: input names for couple</li>
+    </ul>
+</p> 
+    </div>
+ 
+  <form>
+<input class="name-input" id="name" type="text" placeholder="Male"/>
+<input class="name-input" id="name2" type="text" placeholder="Female"/>
+   <button id="signup-btn">Check Score</button>
+       </form> 
+ <!--
+        <div class="feed-container">
+  <label for="textarea">Write Feedback</label>
+        <br>
+   <textarea row="60" placeholder="Write your feedback" id="textarea" cols="30"></textarea>
+    <button type="submit">
+<a href="mailto: volusegun9@gmail.com">Submit Feedback</a><button>
+     <div>
+       -->
+   </div>
+
+
+
+
+
+<script type="text/javascript"> 
+  const name = document.getElementById('name');
+  const name2 = document.getElementById('name2');
+  const button = document.getElementById('signup-btn');
+ button.addEventListener('click', function () {  
+  var result = Math.random(); 
+     result = result * 100;
+     result = Math.floor(result)+1;
+
+   if(name.value == '' && name2.value == '') { 
+   alert("Null couple lovescore cannot be calculated!!!");
+}
+  else if(name.value == '' || name2.value == '') { 
+  alert("Null couple lovescore cannot be calculated!!!");
+}
+  else if (result > 80){
+ alert("Hurray!!!🥰🥰Your love score is "+result+"%: "+"Soulmates unite!, your love is extraordinary!!!");
+ } 
+  else if (result < 40) {
+  alert("🎈🎈Your love score is "+result+"%: "+ "I am sorry!! sparks are flying, but the connection is weak!!");
+} 
+  else { 
+ alert("🥰😍Your love score is " + result+"%: "+"Love in the air, and the future looks bright!!!")
+}
+})
+    /*
+  var guestName= prompt('Enter your name as a guest'); 
+
+ var guestlist= ["Victor", "Opeyemi", "Favour", "Emmanuel", "Olusegun"]; 
+
+ if (guestlist.includes(guestName)) { 
+  alert('You are welcome to the party!!!');
+}
+ else { 
+  alert('Maybe try next time');
+} 
+    */ 
+   
+   </script> 
+</body>
+</html>
